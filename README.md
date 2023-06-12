@@ -1,27 +1,23 @@
-# AngularCleanArchitecture
+# Angular Clean Architecture
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+## Diagram
 
-## Development server
+![diagram](https://github.com/EmilianoSantellan/Angular_Clean_Architecture/assets/8671863/f07352c3-9017-418e-8db1-0c74c3052ec6)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Core
 
-## Code scaffolding
+Esta sección alberga los elementos fundamentales y centrales de la aplicación. Contiene los modelos de dominio, servicios y utilidades comunes utilizados en toda la aplicación. Proporcionando una base sólida y coherente para la lógica de negocio y la manipulación de datos. Aquí se definen las estructuras de datos principales y los servicios que encapsulan la lógica central de la aplicación.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Su principal beneficio es que al tener una sección central bien definida, se mejora la cohesión y el mantenimiento de la lógica de negocio. Además, los servicios centrales pueden ser fácilmente inyectados en diferentes partes de la aplicación, lo que facilita la reutilización y la escalabilidad.
 
-## Build
+## Shared
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Esta sección contiene componentes, directivas y servicios compartidos entre diferentes módulos de la aplicación. El objetivo principal de esta sección es promover la reutilización de código y la consistencia visual en toda la aplicación. Aquí se encuentran elementos que pueden ser compartidos entre diferentes módulos funcionales, como componentes UI personalizados (Botones, Inputs, Loader, Grid, etc) o servicios genéricos (API Handler).
 
-## Running unit tests
+El beneficio de tener una sección compartida, es que se evita la duplicación de código y se fomenta la coherencia en la apariencia y comportamiento de la interfaz de usuario. Además, los elementos compartidos pueden ser fácilmente actualizados y mantenidos en un solo lugar.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Modules
 
-## Running end-to-end tests
+Esta sección contiene los diferentes módulos funcionales de la aplicación, cada uno con su propia estructura interna. Cuyo propósito es organizar y encapsular la funcionalidad específica de cada módulo. Cada módulo puede contener sus propios componentes, servicios, archivos de enrutamiento y definiciones de módulo.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Al dividir la aplicación en módulos, se mejora la modularidad y la claridad del código. Cada módulo puede ser desarrollado, probado y mantenido de forma independiente, lo que facilita la colaboración y el escalamiento del equipo de desarrollo.
